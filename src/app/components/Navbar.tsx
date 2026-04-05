@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router";
 
 export function Navbar() {
   const [isVisible, setIsVisible] = useState(true);
@@ -41,8 +42,8 @@ export function Navbar() {
           <div className="flex items-center justify-between h-16 sm:h-20">
             {/* Logo */}
             <svg
-              width="80"
-              height="80"
+              width="100"
+              height="100"
               viewBox="0 0 500 500"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -77,9 +78,9 @@ export function Navbar() {
             </svg>
 
             {/* Botão Entrar */}
-            <button className="cursor-pointer px-4 sm:px-6 py-2 sm:py-2.5 bg-gradient-to-r from-purple-600 to-purple-500 text-white rounded-lg font-semibold text-sm sm:text-base shadow-lg shadow-purple-500/30 hover:shadow-xl hover:shadow-purple-500/40 hover:-translate-y-0.5 transition-all duration-200">
+            <Link to="/login" className="px-4 sm:px-6 py-2 sm:py-2.5 bg-gradient-to-r from-purple-600 to-purple-500 text-white rounded-lg font-semibold text-sm sm:text-base shadow-lg shadow-purple-500/30 hover:shadow-xl hover:shadow-purple-500/40 hover:-translate-y-0.5 transition-all duration-200">
               Entrar
-            </button>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import { ChevronRight } from "lucide-react";
 import { DashboardMock } from "./DashboardMock";
+import { Link } from "react-router";
 
 export function Hero() {
   return (
@@ -41,10 +42,13 @@ export function Hero() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <button className="cursor-pointer group relative inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-purple-500 text-white rounded-lg font-semibold text-lg shadow-lg shadow-purple-500/50 hover:shadow-xl hover:shadow-purple-500/60 hover:-translate-y-0.5 transition-all duration-200">
+              <Link
+                to="/login"
+                className="cursor-pointer group relative inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-purple-500 text-white rounded-lg font-semibold text-lg shadow-lg shadow-purple-500/50 hover:shadow-xl hover:shadow-purple-500/60 hover:-translate-y-0.5 transition-all duration-200"
+              >
                 Começar agora
                 <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
+              </Link>
 
               <button className="cursor-pointer inline-flex items-center justify-center gap-2 px-8 py-4 bg-slate-800/50 backdrop-blur-sm text-white rounded-lg font-semibold text-lg border border-slate-700 hover:border-slate-600 hover:bg-slate-800/70 transition-all duration-200">
                 Ver demonstração

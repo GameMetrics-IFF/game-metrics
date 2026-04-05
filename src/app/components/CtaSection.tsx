@@ -1,4 +1,5 @@
 import { Sparkles } from "lucide-react";
+import { Link } from "react-router";
 
 export function CtaSection() {
   return (
@@ -35,10 +36,13 @@ export function CtaSection() {
 
               {/* CTA Button */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <button className="cursor-pointer group relative inline-flex items-center justify-center gap-2 px-10 py-5 bg-gradient-to-r from-purple-600 to-purple-500 text-white rounded-xl font-bold text-lg shadow-lg shadow-purple-500/50 hover:shadow-xl hover:shadow-purple-500/60 hover:-translate-y-0.5 transition-all duration-200">
+                <Link
+                  to="/login"
+                  className="cursor-pointer group relative inline-flex items-center justify-center gap-2 px-10 py-5 bg-gradient-to-r from-purple-600 to-purple-500 text-white rounded-xl font-bold text-lg shadow-lg shadow-purple-500/50 hover:shadow-xl hover:shadow-purple-500/60 hover:-translate-y-0.5 transition-all duration-200"
+                >
                   <Sparkles className="w-5 h-5 group-hover:rotate-12 transition-transform" />
                   Criar conta grátis
-                </button>
+                </Link>
               </div>
 
               {/* Trust indicators */}
