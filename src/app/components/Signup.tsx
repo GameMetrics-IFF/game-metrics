@@ -33,6 +33,7 @@ export function Signup() {
             })
 
             const data = await res.json()
+            console.log(data)
 
             if (!res.ok) {
                 alert(data.error || 'Erro ao cadastrar')
