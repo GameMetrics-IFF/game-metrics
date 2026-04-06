@@ -101,7 +101,6 @@ npm run dev
 
 Interface com foco em análise de desempenho, experiência moderna e responsividade.
 <img width="2444" height="8788" alt="game-metrics vercel app_" src="https://github.com/user-attachments/assets/c0788a68-d114-4d44-9858-83292f5fb41a" />
-<img width="1290" height="16384" alt="game-metrics vercel app_(iPhone 14 Pro Max)" src="https://github.com/user-attachments/assets/9489a197-75c4-46ee-8646-fba0cbc05473" />
 
 * Tela de login
 <img width="2444" height="1820" alt="game-metrics vercel app_ (1)" src="https://github.com/user-attachments/assets/799ea7d0-7436-46ab-9c51-e853087475d6" />
