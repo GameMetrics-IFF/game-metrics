@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Mail, Lock, Eye, EyeOff, Gamepad2 } from 'lucide-react'
 import { Link } from 'react-router'
+import API_URL from '../../services/api'
 
 export function Login() {
     const [showPassword, setShowPassword] = useState(false)
@@ -11,7 +12,7 @@ export function Login() {
         e.preventDefault()
 
         try {
-            const res = await fetch('http://localhost:3000/login', {
+            const res = await fetch(`${API_URL}/signup`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -9,6 +9,7 @@ export function Signup() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [confirmPassword, setConfirmPassword] = useState('')
+    import API_URL from '../../services/api'
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault()
@@ -19,7 +20,7 @@ export function Signup() {
         }
 
         try {
-            const res = await fetch('http://localhost:3000/signup', {
+            const res = await fetch('https://game-metrics-backend-production.up.railway.app/signup', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
