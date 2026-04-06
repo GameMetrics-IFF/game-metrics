@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router'
 import { Mail, Lock, Eye, EyeOff, Gamepad2, User } from 'lucide-react'
+import API_URL from '../../services/api'
 
 export function Signup() {
     const [showPassword, setShowPassword] = useState(false)
@@ -9,7 +10,6 @@ export function Signup() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [confirmPassword, setConfirmPassword] = useState('')
-    import API_URL from '../../services/api'
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault()
@@ -20,7 +20,7 @@ export function Signup() {
         }
 
         try {
-            const res = await fetch('https://game-metrics-backend-production.up.railway.app/signup', {
+            const res = await fetch(`${API_URL}/login`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
