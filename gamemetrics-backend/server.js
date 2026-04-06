@@ -5,9 +5,9 @@ const jwt = require('jsonwebtoken')
 const cors = require('cors')
 require('dotenv').config()
 
-app.use(cors())
-
 const app = express()
+
+app.use(cors())
 app.use(express.json())
 
 // Conexão com MySQL
@@ -75,7 +75,7 @@ app.post('/signup', async (req, res) => {
                 return res.status(500).json({ error: 'Erro ao cadastrar usuário' })
             }
 
-            const token = jwt.sign({ id: result.insertId }, 'SECRET', {
+            jwt.sign({ id: user.id }, process.env.JWT_SECRET, {
                 expiresIn: '1d',
             })
 
