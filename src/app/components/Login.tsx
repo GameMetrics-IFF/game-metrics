@@ -7,10 +7,37 @@ export function Login() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault()
-        // Lógica de login aqui
-        console.log('Login:', { email, password })
+
+        try {
+            const res = await fetch('http://localhost:3000/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    email,
+                    password,
+                }),
+            })
+
+            const data = await res.json()
+
+            if (!res.ok) {
+                alert(data.error || 'Erro ao fazer login')
+                return
+            }
+
+            // salva token
+            localStorage.setItem('token', data.token)
+
+            // redireciona
+            window.location.href = '/'
+        } catch (error) {
+            console.error(error)
+            alert('Erro ao conectar com o servidor')
+        }
     }
 
     return (

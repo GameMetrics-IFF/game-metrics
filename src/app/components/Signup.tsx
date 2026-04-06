@@ -10,10 +10,44 @@ export function Signup() {
     const [password, setPassword] = useState('')
     const [confirmPassword, setConfirmPassword] = useState('')
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault()
-        // Lógica de cadastro aqui
-        console.log('Cadastro:', { name, email, password, confirmPassword })
+
+        if (password !== confirmPassword) {
+            alert('As senhas não coincidem')
+            return
+        }
+
+        try {
+            const res = await fetch('http://localhost:3000/signup', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name,
+                    email,
+                    password,
+                }),
+            })
+
+            const data = await res.json()
+
+            if (!res.ok) {
+                alert(data.error || 'Erro ao cadastrar')
+                return
+            }
+
+            alert('Usuário criado com sucesso!')
+
+            // opcional: já logar automaticamente
+            localStorage.setItem('token', data.token)
+
+            window.location.href = '/'
+        } catch (error) {
+            console.error(error)
+            alert('Erro ao conectar com o servidor')
+        }
     }
 
     return (
