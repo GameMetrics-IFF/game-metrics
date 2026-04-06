@@ -1,5 +1,5 @@
 import { Sparkles } from 'lucide-react'
-import { Link } from 'react-router'
+import { Link } from 'react-router-dom'
 
 export function CtaSection() {
     return (

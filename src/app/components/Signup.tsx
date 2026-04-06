@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link } from 'react-router'
+import { Link } from 'react-router-dom'
 import { Mail, Lock, Eye, EyeOff, Gamepad2, User } from 'lucide-react'
 import API_URL from '../../services/api'
 

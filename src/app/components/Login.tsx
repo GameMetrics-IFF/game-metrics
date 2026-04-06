@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Mail, Lock, Eye, EyeOff, Gamepad2 } from 'lucide-react'
-import { Link } from 'react-router'
+import { Link } from 'react-router-dom'
 import API_URL from '../../services/api'
 
 export function Login() {
