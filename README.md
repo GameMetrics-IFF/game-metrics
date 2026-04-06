@@ -1,11 +1,17 @@
+## Para instalar as dependências:
 
-  # Landing page Game Metrics
+```bash
+bun install
+```
 
-  This is a code bundle for Landing page Game Metrics. The original project is available at https://www.figma.com/design/ENg92FI9ZqYaRcnLtH3cEa/Landing-page-Game-Metrics.
+To run:
 
-  ## Running the code
+```bash
+bun dev
+```
 
-  Run `npm i` to install the dependencies.
+To build:
 
-  Run `npm run dev` to start the development server.
-  
+```bash
+bun run build
+```
