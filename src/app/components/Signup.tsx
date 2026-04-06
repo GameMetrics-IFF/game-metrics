@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Mail, Lock, Eye, EyeOff, Gamepad2, User } from 'lucide-react'
+import API_URL from '../../services/api'
 
 export function Signup() {
     const [showPassword, setShowPassword] = useState(false)
@@ -9,7 +10,6 @@ export function Signup() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [confirmPassword, setConfirmPassword] = useState('')
-    import API_URL from '../../services/api'
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault()
