@@ -12,7 +12,7 @@ export function Login() {
         e.preventDefault()
 
         try {
-            const res = await fetch(`${API_URL}/login`, {
+            const res = await fetch(`${API_URL}/signup`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
